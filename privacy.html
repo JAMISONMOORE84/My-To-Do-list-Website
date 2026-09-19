@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | My To-Do List</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #3b0d13;
+            border-bottom: 1px solid #54151d;
+            padding: 45px 20px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            line-height: 1;
+            letter-spacing: -1.5px;
+            margin-bottom: 14px;
+        }
+
+        .header p {
+            color: #ff9aa3;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .back-container {
+            display: flex;
+            justify-content: center;
+            padding: 28px 20px 0;
+        }
+
+        .back-btn {
+            background: #17171b;
+            color: #fff;
+            border: 1px solid #36363b;
+            border-radius: 10px;
+            padding: 12px 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background: #f52d3d;
+            border-color: #f52d3d;
+            transform: translateY(-2px);
+        }
+
+        .back-btn:active {
+            transform: translateY(0);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 45px 18px 80px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            font-size: 25px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #aaa8b1;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .privacy-card {
+            background: #111113;
+            border: 1px solid #29292d;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 14px;
+            transition: 0.2s ease;
+        }
+
+        .privacy-card:hover {
+            border-color: #3b3b40;
+        }
+
+        .privacy-number {
+            width: 40px;
+            height: 40px;
+            background: #35151a;
+            color: #ff5262;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            margin-bottom: 17px;
+        }
+
+        .privacy-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .privacy-card p {
+            color: #aaa8b1;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 13px;
+        }
+
+        .privacy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-card ul {
+            color: #aaa8b1;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.7;
+            padding-left: 21px;
+        }
+
+        .privacy-card li {
+            margin-bottom: 7px;
+        }
+
+        .privacy-card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .notice {
+            background: #210003;
+            border: 1px solid #650c13;
+            border-radius: 13px;
+            padding: 22px;
+            margin-top: 30px;
+        }
+
+        .notice h2 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .notice p {
+            color: #ddd0d2;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .footer {
+            border-top: 1px solid #1c1c1c;
+            text-align: center;
+            padding: 35px 20px 40px;
+            color: #77777d;
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        .footer strong {
+            color: #aaa8b1;
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 38px 18px 32px;
+            }
+
+            .header h1 {
+                font-size: 34px;
+            }
+
+            .header p {
+                font-size: 12px;
+            }
+
+            .back-container {
+                padding-top: 22px;
+            }
+
+            .back-btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+                padding: 13px 18px;
+            }
+
+            .container {
+                padding: 32px 12px 60px;
+            }
+
+            .intro h2 {
+                font-size: 22px;
+            }
+
+            .intro p {
+                font-size: 13px;
+            }
+
+            .privacy-card {
+                padding: 21px;
+            }
+
+            .privacy-card h3 {
+                font-size: 17px;
+            }
+
+            .privacy-card p,
+            .privacy-card ul {
+                font-size: 13px;
+            }
+
+            .notice {
+                padding: 20px;
+            }
+        }
+
+        @media (min-width: 700px) {
+
+            .header {
+                padding: 60px 30px 50px;
+            }
+
+            .header h1 {
+                font-size: 52px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+
+            .container {
+                padding-top: 50px;
+            }
+
+            .intro h2 {
+                font-size: 30px;
+            }
+
+            .privacy-card {
+                padding: 30px;
+            }
+
+            .privacy-card h3 {
+                font-size: 20px;
+            }
+
+            .privacy-card p,
+            .privacy-card ul {
+                font-size: 14px;
+            }
+
+            .notice {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Privacy Policy</h1>
+        <p>My To-Do List</p>
+        <p>Last updated: September 19, 2026</p>
+    </header>
+
+    <div class="back-container">
+        <a href="index.html" class="back-btn">
+            Go Back to Main Index
+        </a>
+    </div>
+
+    <main class="container">
+
+        <section class="intro">
+            <h2>Your Privacy Matters</h2>
+
+            <p>
+                This Privacy Policy explains what information My To-Do List
+                may collect, how it is used, and how we work to protect your
+                information.
+            </p>
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                01
+            </div>
+
+            <h3>Information We Collect</h3>
+
+            <p>
+                Depending on the features you use, My To-Do List may collect
+                information that you provide when creating or using your
+                account.
+            </p>
+
+            <ul>
+                <li>Name or username</li>
+                <li>Email address</li>
+                <li>Account information</li>
+                <li>Tasks and reminders you create</li>
+                <li>Family member information you choose to add</li>
+            </ul>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                02
+            </div>
+
+            <h3>How We Use Your Information</h3>
+
+            <p>
+                Information collected by My To-Do List may be used to provide
+                and improve the features of the app.
+            </p>
+
+            <ul>
+                <li>Provide access to your account</li>
+                <li>Save and display your tasks</li>
+                <li>Provide reminders and notifications</li>
+                <li>Provide family features</li>
+                <li>Maintain and improve the app</li>
+                <li>Help troubleshoot problems</li>
+            </ul>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                03
+            </div>
+
+            <h3>Account Information</h3>
+
+            <p>
+                If you create an account, information associated with your
+                account may be stored so that you can sign in and access your
+                app data across supported devices.
+            </p>
+
+            <p>
+                You are responsible for keeping your account credentials
+                secure.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                04
+            </div>
+
+            <h3>Tasks and Reminders</h3>
+
+            <p>
+                Tasks, reminders, and related information that you create may
+                be stored so that the app can display and manage them.
+            </p>
+
+            <p>
+                Reminder notifications may use information about your tasks
+                and reminder settings to provide the requested notifications.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                05
+            </div>
+
+            <h3>Family Information</h3>
+
+            <p>
+                If you use family features, you may choose to provide
+                information about family members or other people you add.
+            </p>
+
+            <p>
+                This information may include names, email addresses, and
+                roles. You should only provide information that you have
+                permission to provide.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                06
+            </div>
+
+            <h3>Third-Party Services</h3>
+
+            <p>
+                My To-Do List may use third-party services to provide certain
+                features, including authentication, database storage, and
+                other app functionality.
+            </p>
+
+            <p>
+                These services may process information according to their own
+                privacy policies and terms.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                07
+            </div>
+
+            <h3>Notifications</h3>
+
+            <p>
+                My To-Do List may send notifications for reminders, overdue
+                tasks, and other app activity when notifications are enabled
+                on your device.
+            </p>
+
+            <p>
+                You can control notification permissions through your device
+                settings.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                08
+            </div>
+
+            <h3>Data Security</h3>
+
+            <p>
+                We take reasonable steps to help protect information used by
+                My To-Do List.
+            </p>
+
+            <p>
+                However, no online service or electronic storage system can
+                guarantee complete security.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                09
+            </div>
+
+            <h3>Data Retention</h3>
+
+            <p>
+                Information may be retained for as long as necessary to
+                provide the app's features, maintain accounts, provide
+                backups, improve services, or meet applicable requirements.
+            </p>
+
+            <p>
+                Deleted information may remain temporarily available when
+                needed for features such as deleted-task recovery or other
+                app functionality.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                10
+            </div>
+
+            <h3>Your Choices</h3>
+
+            <p>
+                Depending on the features available, you may be able to
+                update or delete certain information associated with your
+                account.
+            </p>
+
+            <p>
+                You can also control certain permissions, including
+                notifications, through your device settings.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                11
+            </div>
+
+            <h3>Children's Privacy</h3>
+
+            <p>
+                My To-Do List is not intended to knowingly collect personal
+                information from children in violation of applicable laws.
+            </p>
+
+            <p>
+                If you believe that personal information has been provided by
+                a child in a way that violates applicable requirements,
+                please contact support.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                12
+            </div>
+
+            <h3>Changes to This Privacy Policy</h3>
+
+            <p>
+                This Privacy Policy may be updated when the app changes, new
+                features are introduced, or privacy practices change.
+            </p>
+
+            <p>
+                When changes are made, the updated policy will be posted on
+                this page with a new "Last updated" date.
+            </p>
+
+        </section>
+
+        <section class="privacy-card">
+
+            <div class="privacy-number">
+                13
+            </div>
+
+            <h3>Contact</h3>
+
+            <p>
+                If you have questions or concerns about this Privacy Policy
+                or how information is handled, please contact the My To-Do
+                List support team.
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:mytodolistsupport@gmail.com" style="color: #ff5262; text-decoration: none;">
+                    support@My To-Do List.com
+                </a>
+            </p>
+
+        </section>
+
+        <section class="notice">
+
+            <h2>Important</h2>
+
+            <p>
+                This Privacy Policy is intended to describe the general
+                privacy practices of My To-Do List. Make sure the final policy
+                accurately matches the information your app actually collects,
+                the services it uses, and the legal requirements that apply
+                to your app.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <strong>My To-Do List</strong>
+        <br>
+        © 2026 My To-Do List. All rights reserved.
+    </footer>
+
+</body>
+</html>

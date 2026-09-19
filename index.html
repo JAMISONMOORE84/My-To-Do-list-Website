@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My To-Do List</title>
+
+<style>
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #000;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+}
+
+header {
+	height: 56px;
+	background: #3b0d13;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 12px;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+}
+
+.logo {
+	width: 27px;
+	height: 27px;
+	border-radius: 7px;
+	background: #f52d3d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 17px;
+	font-weight: 900;
+}
+
+.brand-name {
+	font-size: 15px;
+	font-weight: 900;
+}
+
+nav {
+	display: flex;
+	gap: 12px;
+}
+
+nav a {
+	color: #aaa5aa;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+nav a:hover {
+	color: #fff;
+}
+
+.hero {
+	position: relative;
+	background: #f52d3d;
+	min-height: 390px;
+	padding: 54px 11px 100px;
+	overflow: hidden;
+}
+
+.hero::after {
+	content: "";
+	position: absolute;
+	width: 125%;
+	height: 160px;
+	left: -12%;
+	bottom: -120px;
+	background: #000;
+	border-radius: 50%;
+	transform: rotate(-8deg);
+}
+
+.eyebrow {
+	color: #ff9aa3;
+	font-size: 11px;
+	letter-spacing: 1.2px;
+	margin-bottom: 26px;
+}
+
+.hero h1 {
+	max-width: 360px;
+	font-size: 39px;
+	line-height: 1.04;
+	letter-spacing: -1.8px;
+	margin-bottom: 23px;
+}
+
+.hero p {
+	max-width: 365px;
+	color: #ffabb2;
+	font-size: 15px;
+	line-height: 1.55;
+	margin-bottom: 27px;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.buttons a {
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.support-btn {
+	color: #fff;
+	padding: 11px 15px;
+}
+
+.policy-btn {
+	background: #17171b;
+	color: #fff;
+	border-radius: 11px;
+	padding: 12px 17px;
+	border: 1px solid #24242a;
+}
+
+.phone-wrapper {
+	position: relative;
+	z-index: 10;
+	margin-top: -37px;
+	display: flex;
+	justify-content: center;
+}
+
+.phone {
+	width: 218px;
+	height: 327px;
+	background: #151519;
+	border: 1px solid #38383d;
+	border-radius: 30px;
+	padding: 49px 16px 18px;
+	position: relative;
+	box-shadow: 0 20px 50px rgba(0,0,0,.4);
+}
+
+.phone-notch {
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 78px;
+	height: 17px;
+	border-radius: 20px;
+	background: #000;
+}
+
+.phone-card {
+	background: #18181d;
+	border: 1px solid #3b3b42;
+	border-radius: 14px;
+	padding: 17px 13px;
+	margin-bottom: 9px;
+}
+
+.phone-card:last-child {
+	margin-bottom: 0;
+}
+
+.phone-label {
+	color: #aaa8b1;
+	font-size: 9px;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+
+.phone-value {
+	font-size: 16px;
+	line-height: 1.1;
+}
+
+.phone-status {
+	color: #ff6675;
+}
+
+main {
+	max-width: 700px;
+	margin: auto;
+	padding: 98px 11px 80px;
+}
+
+.section-label {
+	display: inline-block;
+	color: #ff8c96;
+	border: 1px solid #64141b;
+	background: #190608;
+	border-radius: 20px;
+	padding: 6px 10px;
+	font-size: 9px;
+	letter-spacing: 1px;
+	margin-bottom: 17px;
+}
+
+.intro h2 {
+	font-size: 25px;
+	line-height: 1.05;
+	letter-spacing: -1px;
+	max-width: 340px;
+	margin-bottom: 19px;
+}
+
+.intro p {
+	color: #aaa8b1;
+	font-size: 13px;
+	line-height: 1.6;
+	max-width: 370px;
+}
+
+.features {
+	margin-top: 27px;
+}
+
+.feature {
+	background: #17171b;
+	border: 1px solid #36363b;
+	border-radius: 19px;
+	padding: 20px;
+	margin-bottom: 13px;
+}
+
+.number {
+	width: 35px;
+	height: 35px;
+	background: #35151a;
+	color: #ff5262;
+	border-radius: 9px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+	margin-bottom: 17px;
+}
+
+.feature h3 {
+	font-size: 14px;
+	margin-bottom: 16px;
+}
+
+.feature p {
+	color: #aaa8b1;
+	font-size: 13px;
+	line-height: 1.55;
+}
+
+.disclaimer {
+	margin-top: 68px;
+	background: #210003;
+	border: 1px solid #650c13;
+	border-radius: 13px;
+	padding: 20px;
+}
+
+.disclaimer h2 {
+	font-size: 15px;
+	line-height: 1.15;
+	margin-bottom: 18px;
+}
+
+.disclaimer p {
+	color: #ddd0d2;
+	font-size: 12px;
+	line-height: 1.65;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+	border-top: 1px solid #1c1c1c;
+	padding: 38px 11px 40px;
+}
+
+.copyright {
+	color: #aaa8b1;
+	font-size: 11px;
+	margin-bottom: 29px;
+}
+
+.footer-links {
+	display: flex;
+	gap: 14px;
+}
+
+.footer-links a {
+	color: #aaa8b1;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.footer-links a:hover {
+	color: #fff;
+}
+
+@media (min-width: 700px) {
+
+	header {
+		height: 80px;
+		padding: 0 30px;
+	}
+
+	.logo {
+		width: 39px;
+		height: 39px;
+		border-radius: 11px;
+		font-size: 23px;
+	}
+
+	.brand-name {
+		font-size: 21px;
+	}
+
+	nav {
+		gap: 18px;
+	}
+
+	nav a {
+		font-size: 15px;
+	}
+
+	.hero {
+		padding: 90px 30px 130px;
+		min-height: 530px;
+	}
+
+	.hero h1 {
+		font-size: 64px;
+		max-width: 650px;
+	}
+
+	.hero p {
+		font-size: 19px;
+		max-width: 560px;
+	}
+
+	.phone-wrapper {
+		margin-top: -100px;
+	}
+
+	.phone {
+		width: 270px;
+		height: 400px;
+	}
+
+	main {
+		padding-top: 120px;
+	}
+
+	.intro h2 {
+		font-size: 34px;
+	}
+
+	.feature {
+		padding: 28px;
+	}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+	<div class="brand">
+		<div class="logo">M</div>
+		<div class="brand-name">My To-Do List</div>
+	</div>
+
+	<nav>
+		<a href="support.html">Support</a>
+		<a href="privacy.html">Privacy</a>
+		<a href="terms.html">Terms</a>
+	</nav>
+</header>
+
+<section class="hero">
+
+	<div class="eyebrow">
+		Built for Task.
+	</div>
+
+	<h1>
+		Your task reminder,<br>
+		organized.
+	</h1>
+
+	<p>
+		Do your task without forgetting about.
+	</p>
+
+	<div class="buttons">
+		<a class="support-btn" href="support.html">
+			Get support
+		</a>
+
+		<a class="policy-btn" href="privacy.html">
+			Privacy policy
+		</a>
+	</div>
+
+</section>
+
+<div class="phone-wrapper">
+
+	<div class="phone">
+
+		<div class="phone-notch"></div>
+
+		<div class="phone-card">
+			<div class="phone-label">
+				Task
+			</div>
+
+			<div class="phone-value">
+				Do dishes.
+			</div>
+		</div>
+
+		<div class="phone-card">
+			<div class="phone-label">
+				On time
+			</div>
+
+			<div class="phone-value">
+				Done
+			</div>
+		</div>
+
+		<div class="phone-card">
+			<div class="phone-label">
+				STATUS
+			</div>
+
+			<div class="phone-value phone-status">
+				Ready to be done
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+<main>
+
+	<section class="intro">
+
+		<div class="section-label">
+			ONE PLACE FOR THE TABLE
+		</div>
+
+		<h2>
+			Spend less time remembering
+			and more time doing it.
+		</h2>
+
+		<p>
+			My To-Do List keeps the operational details of task
+		</p>
+
+	</section>
+
+	<section class="features">
+
+		<div class="feature">
+
+			<div class="number">
+				01
+			</div>
+
+			<h3>
+				Do task
+			</h3>
+
+			<p>
+				create task.
+				
+				invite members, to add to your list
+				Task organized.
+			</p>
+
+		</div>
+
+
+		<div class="feature">
+
+			<div class="number">
+				02
+			</div>
+
+			<h3>
+				Track the task
+			</h3>
+
+			<p>
+				Notifis you that it needs done
+				and player results without a separate
+				spreadsheet.
+			</p>
+
+		</div>
+
+
+		<div class="feature">
+
+			<div class="number">
+				03
+			</div>
+
+			<h3>
+				Finish clearly
+			</h3>
+
+			<p>
+				Review settlements, preserve completed-
+				game history, and share a clean summary
+				with the group.
+			</p>
+
+		</div>
+
+	</section>
+
+<footer>
+
+	<div class="copyright">
+		© 2026 Jamison Moore. My To-Do List.
+	</div>
+
+	<div class="footer-links">
+		<a href="index.html">Home</a>
+		<a href="mailto:support@potly.xyz">Email</a>
+	</div>
+
+</footer>
+
+</body>
+</html>

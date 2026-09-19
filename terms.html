@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terms of Service | My To-Do List</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #3b0d13;
+            border-bottom: 1px solid #54151d;
+            padding: 45px 20px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            line-height: 1;
+            letter-spacing: -1.5px;
+            margin-bottom: 14px;
+        }
+
+        .header p {
+            color: #ff9aa3;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .back-container {
+            display: flex;
+            justify-content: center;
+            padding: 28px 20px 0;
+        }
+
+        .back-btn {
+            background: #17171b;
+            color: #fff;
+            border: 1px solid #36363b;
+            border-radius: 10px;
+            padding: 12px 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background: #f52d3d;
+            border-color: #f52d3d;
+            transform: translateY(-2px);
+        }
+
+        .back-btn:active {
+            transform: translateY(0);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 45px 18px 80px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            font-size: 25px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #aaa8b1;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .terms-card {
+            background: #111113;
+            border: 1px solid #29292d;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 14px;
+            transition: 0.2s ease;
+        }
+
+        .terms-card:hover {
+            border-color: #3b3b40;
+        }
+
+        .terms-number {
+            width: 40px;
+            height: 40px;
+            background: #35151a;
+            color: #ff5262;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            margin-bottom: 17px;
+        }
+
+        .terms-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .terms-card p {
+            color: #aaa8b1;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 13px;
+        }
+
+        .terms-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .terms-card ul {
+            color: #aaa8b1;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.7;
+            padding-left: 21px;
+        }
+
+        .terms-card li {
+            margin-bottom: 7px;
+        }
+
+        .terms-card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .notice {
+            background: #210003;
+            border: 1px solid #650c13;
+            border-radius: 13px;
+            padding: 22px;
+            margin-top: 30px;
+        }
+
+        .notice h2 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .notice p {
+            color: #ddd0d2;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .footer {
+            border-top: 1px solid #1c1c1c;
+            text-align: center;
+            padding: 35px 20px 40px;
+            color: #77777d;
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        .footer strong {
+            color: #aaa8b1;
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 38px 18px 32px;
+            }
+
+            .header h1 {
+                font-size: 34px;
+            }
+
+            .header p {
+                font-size: 12px;
+            }
+
+            .back-container {
+                padding-top: 22px;
+            }
+
+            .back-btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+                padding: 13px 18px;
+            }
+
+            .container {
+                padding: 32px 12px 60px;
+            }
+
+            .intro h2 {
+                font-size: 22px;
+            }
+
+            .intro p {
+                font-size: 13px;
+            }
+
+            .terms-card {
+                padding: 21px;
+            }
+
+            .terms-card h3 {
+                font-size: 17px;
+            }
+
+            .terms-card p,
+            .terms-card ul {
+                font-size: 13px;
+            }
+
+            .notice {
+                padding: 20px;
+            }
+        }
+
+        @media (min-width: 700px) {
+
+            .header {
+                padding: 60px 30px 50px;
+            }
+
+            .header h1 {
+                font-size: 52px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+
+            .container {
+                padding-top: 50px;
+            }
+
+            .intro h2 {
+                font-size: 30px;
+            }
+
+            .terms-card {
+                padding: 30px;
+            }
+
+            .terms-card h3 {
+                font-size: 20px;
+            }
+
+            .terms-card p,
+            .terms-card ul {
+                font-size: 14px;
+            }
+
+            .notice {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Terms of Service</h1>
+        <p>My To-Do List</p>
+        <p>Last updated: September 19, 2026</p>
+    </header>
+
+    <div class="back-container">
+        <a href="index.html" class="back-btn">
+            Go Back to Main Index
+        </a>
+    </div>
+
+    <main class="container">
+
+        <section class="intro">
+            <h2>Terms for using My To-Do List</h2>
+
+            <p>
+                These Terms of Service explain the rules and conditions that
+                apply when you use My To-Do List.
+            </p>
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                01
+            </div>
+
+            <h3>Acceptance of Terms</h3>
+
+            <p>
+                By accessing or using My To-Do List, you agree to follow
+                these Terms of Service. If you do not agree with these terms,
+                you should not use the app.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                02
+            </div>
+
+            <h3>Using the App</h3>
+
+            <p>
+                My To-Do List is designed to help users create, organize,
+                manage, and track tasks and reminders.
+            </p>
+
+            <p>
+                You agree to use the app only for lawful purposes and in a
+                way that does not interfere with the app or other users.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                03
+            </div>
+
+            <h3>Your Account</h3>
+
+            <p>
+                Some features may require you to create an account. You are
+                responsible for keeping your account information accurate and
+                keeping your login credentials secure.
+            </p>
+
+            <p>
+                You should not knowingly allow another person to use your
+                account without permission.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                04
+            </div>
+
+            <h3>Your Content</h3>
+
+            <p>
+                You may create and store tasks, reminders, and other content
+                through My To-Do List.
+            </p>
+
+            <p>
+                You are responsible for the content you choose to enter into
+                the app and for making sure that you have the necessary rights
+                or permission to use that content.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                05
+            </div>
+
+            <h3>Family Features</h3>
+
+            <p>
+                My To-Do List may provide features that allow you to add
+                family members or other people to your account.
+            </p>
+
+            <p>
+                You are responsible for making sure that information you add
+                about another person is accurate and that you have permission
+                to provide that information.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                06
+            </div>
+
+            <h3>Notifications and Reminders</h3>
+
+            <p>
+                My To-Do List may provide notifications and reminders for
+                tasks and other activity.
+            </p>
+
+            <p>
+                Notifications depend on device permissions and settings.
+                We cannot guarantee that every notification or reminder will
+                always be delivered.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                07
+            </div>
+
+            <h3>Prohibited Use</h3>
+
+            <p>
+                You agree not to use My To-Do List to:
+            </p>
+
+            <ul>
+                <li>Break applicable laws or regulations.</li>
+                <li>Attempt to gain unauthorized access to the app.</li>
+                <li>Interfere with the operation of the app.</li>
+                <li>Upload malicious software or harmful content.</li>
+                <li>Abuse features intended for other users.</li>
+            </ul>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                08
+            </div>
+
+            <h3>Third-Party Services</h3>
+
+            <p>
+                My To-Do List may use third-party services to provide certain
+                features, including authentication, cloud storage, and other
+                services.
+            </p>
+
+            <p>
+                Your use of those services may also be subject to the terms
+                and policies of the companies providing them.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                09
+            </div>
+
+            <h3>Availability of the App</h3>
+
+            <p>
+                We may change, update, suspend, or discontinue features of
+                My To-Do List at any time.
+            </p>
+
+            <p>
+                We will work to keep the app available, but we cannot
+                guarantee that the app will always be available or free from
+                interruptions.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                10
+            </div>
+
+            <h3>Data and Account Deletion</h3>
+
+            <p>
+                Depending on the features available, you may be able to
+                delete tasks or other information associated with your
+                account.
+            </p>
+
+            <p>
+                Certain information may remain temporarily stored when
+                necessary to provide features such as deleted-task recovery,
+                security, backups, or other app functionality.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                11
+            </div>
+
+            <h3>Changes to These Terms</h3>
+
+            <p>
+                We may update these Terms of Service when the app changes or
+                when new features are introduced.
+            </p>
+
+            <p>
+                Updated terms will be posted on this page with a new
+                "Last updated" date.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                12
+            </div>
+
+            <h3>Termination</h3>
+
+            <p>
+                Access to My To-Do List may be suspended or terminated if
+                these Terms of Service are violated or if necessary to protect
+                the app, its users, or its services.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                13
+            </div>
+
+            <h3>Disclaimer</h3>
+
+            <p>
+                My To-Do List is provided on an "as available" basis. While we
+                work to keep the app reliable, we do not guarantee that the
+                app will always be completely error-free, uninterrupted, or
+                available.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                14
+            </div>
+
+            <h3>Limitation of Liability</h3>
+
+            <p>
+                To the extent permitted by applicable law, My To-Do List and
+                its developers are not responsible for losses or damages
+                resulting from your use of the app or your inability to use
+                the app.
+            </p>
+
+        </section>
+
+        <section class="terms-card">
+
+            <div class="terms-number">
+                15
+            </div>
+
+            <h3>Contact</h3>
+
+            <p>
+                If you have questions about these Terms of Service, please
+                contact the My To-Do List support team.
+            </p>
+
+        </section>
+
+        <section class="notice">
+
+            <h2>Important</h2>
+
+            <p>
+                These Terms of Service are intended to describe the general
+                rules for using My To-Do List. Make sure the final terms match
+                the actual features, services, and legal requirements that
+                apply to your app.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <strong>My To-Do List</strong>
+        <br>
+        © 2026 My To-Do List. All rights reserved.
+    </footer>
+
+</body>
+</html>
