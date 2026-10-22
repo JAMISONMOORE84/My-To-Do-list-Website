@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#28282B">
+
+    <title>My To-Do List | Get Things Done</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            background: #28282B;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            text-align: center;
+        }
+
+
+.back-button {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a1a1aa;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #ffffff;
+}
+
+.back-button span {
+    font-size: 24px;
+    line-height: 1;
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        top: 16px;
+        left: 16px;
+    }
+}
+
+        .header {
+            margin-bottom: 28px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #a1a1aa;
+            font-size: 14px;
+        }
+
+        .app-card {
+            display: block;
+            padding: 28px 24px;
+            margin-bottom: 18px;
+            background: #1d1d20;
+            border: 1px solid #3a3a40;
+            border-radius: 22px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            border-color: #3968ed;
+        }
+
+        .app-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 19px;
+            background: #3968ed;
+        }
+
+        .app-icon svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .app-card h2 {
+            font-size: 21px;
+            margin-bottom: 9px;
+        }
+
+        .description {
+            color: #a1a1aa;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 11px;
+            margin-bottom: 18px;
+            border-radius: 30px;
+            background: #292e3c;
+            border: 1px solid #39486c;
+            color: #91adff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .download-button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border-radius: 11px;
+            background: #3968ed;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 650;
+        }
+
+        .testflight-icon {
+            background: #242d47;
+            border: 1px solid #3b4c78;
+        }
+
+        .testflight-icon svg {
+            width: 38px;
+            height: 38px;
+        }
+
+        .testflight-button {
+            background: #465cbd;
+        }
+
+        .app-card:hover .download-button {
+            filter: brightness(1.12);
+        }
+
+        .footer {
+            margin-top: 12px;
+            color: #71717a;
+            font-size: 12px;
+        }
+
+        @media (max-width: 400px) {
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .app-card {
+                padding: 24px 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-button" aria-label="Go back">
+    <span>←</span> Back
+</a>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>My To-Do List</h1>
+            <p>Stay organized. Get things done.</p>
+        </header>
+
+        <a
+            class="app-card"
+            href="AppLoader.html"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <div class="app-icon">
+                <svg viewBox="0 0 48 48" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" y="7" width="34" height="34" rx="10"
+                          stroke="white" stroke-width="2.5"/>
+                    <path d="M15 24L21 30L34 17"
+                          stroke="white" stroke-width="3.5"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <h2>Download the App</h2>
+
+            <p class="description">
+                Get My To-Do List on your iPhone and keep your tasks organized.
+            </p>
+
+            <span class="tag">APP STORE</span>
+
+            <span class="download-button">
+                Download Now ↗
+            </span>
+        </a>
+
+        <a
+            class="app-card"
+            href="https://testflight.apple.com/join/ke5SXDeT"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <div class="app-icon testflight-icon">
+                <svg viewBox="0 0 48 48" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 5L43 38H5L24 5Z"
+                          stroke="#91ADFF" stroke-width="2.5"
+                          stroke-linejoin="round"/>
+                    <path d="M17 23L24 35L31 23"
+                          stroke="white" stroke-width="3"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <h2>Join the Beta</h2>
+
+            <p class="description">
+                Try new features, test updates, and help improve My To-Do List.
+            </p>
+
+            <span class="tag">TESTFLIGHT</span>
+
+            <span class="download-button testflight-button">
+                Join TestFlight ↗
+            </span>
+        </a>
+
+        <p class="footer">
+            My To-Do List &copy; 2026
+        </p>
+
+    </main>
+</body>
+</html>
